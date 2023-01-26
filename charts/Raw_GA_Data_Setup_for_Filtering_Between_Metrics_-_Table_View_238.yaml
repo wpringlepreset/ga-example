@@ -1,0 +1,39 @@
+slice_name: Raw GA Data Setup for Filtering Between Metrics - Table View
+viz_type: table
+params:
+  datasource: 69__table
+  viz_type: table
+  query_mode: raw
+  groupby: []
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    Date: true
+  all_columns:
+  - Date
+  - Metric
+  - Value
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    subject: Date
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  order_by_cols:
+  - '["Date", false]'
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  include_search: true
+  show_cell_bars: false
+  color_pn: true
+  allow_rearrange_columns: true
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 37
+cache_timeout: null
+uuid: fda52242-1294-4591-8f6f-e5a5a403c66d
+version: 1.0.0
+dataset_uuid: 8516dfea-7cfe-496b-a858-666f16aca378

@@ -1,0 +1,16 @@
+database_name: TPS Report Jinja
+sqlalchemy_uri: gsheets://
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_file_upload: false
+extra:
+  allows_virtual_table_explore: true
+  engine_params:
+    catalog:
+      Jinja Categories: https://docs.google.com/spreadsheets/d/1sh2YYxWRpbsR1NPsyot-XhBbjAKdQY_iKnd1afn0KKs/edit?usp=sharing
+      GA Example Data Setup For Metric Filter: https://docs.google.com/spreadsheets/d/1pV1_-p7OViB51rPDfkmC5fM_1iHcB-7v8csYJsb5kDk/edit?usp=sharing
+uuid: 97cec34b-03c7-4615-b897-311537580ae3
+version: 1.0.0

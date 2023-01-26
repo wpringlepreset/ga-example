@@ -1,0 +1,223 @@
+dashboard_title: GA Data Filtered by Metric
+description: null
+css: ''
+slug: null
+uuid: 354cb757-86e4-49b2-8812-d851ecb9e760
+position:
+  CHART-explore-238-1:
+    children: []
+    id: CHART-explore-238-1
+    meta:
+      chartId: 238
+      height: 50
+      sliceName: Raw GA Data Setup for Filtering Between Metrics - Table Views
+      uuid: fda52242-1294-4591-8f6f-e5a5a403c66d
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-h44yxuPjOZ
+    type: CHART
+  CHART-explore-239-1:
+    children: []
+    id: CHART-explore-239-1
+    meta:
+      chartId: 239
+      height: 50
+      sliceName: GA Filtered Metrics Example Line Chart
+      uuid: d7cf5e5d-a7ef-42d9-9916-3d2ee0f736d3
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-bpT-O_0XI
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-bpT-O_0XI
+    - ROW-C6G0Yk3aOU
+    - ROW-h44yxuPjOZ
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: GA Data Filtered by Metric
+    type: HEADER
+  MARKDOWN-pmV1ygc9y0:
+    children: []
+    id: MARKDOWN-pmV1ygc9y0
+    meta:
+      code: "This dashboard demonstrates how you would setup data so that you could\
+        \ plot various different dimensions and their metrics on one common chart.\
+        \ \n\nThe easiest way to accomplish this is to have the data structured in\
+        \ a narrow format so that we are simply plotting one value that has many rows\
+        \ of data related to a \"Metric\" that can then be filtered using the filters\
+        \ on the left hand side. You can see how the raw data is stored in the table\
+        \ below. \n\nThe chart is then configured to display all of the different\
+        \ variations in the \"Metrics\" column but using a default filter on the dashboard\
+        \ and requiring only one value it can be made very user friendly to switch\
+        \ between various different metrics the user may want to analyze without having\
+        \ to create multiple charts."
+      height: 29
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-C6G0Yk3aOU
+    type: MARKDOWN
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-C6G0Yk3aOU:
+    children:
+    - MARKDOWN-pmV1ygc9y0
+    id: ROW-C6G0Yk3aOU
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-bpT-O_0XI:
+    children:
+    - CHART-explore-239-1
+    id: ROW-bpT-O_0XI
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-h44yxuPjOZ:
+    children:
+    - CHART-explore-238-1
+    id: ROW-h44yxuPjOZ
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  show_native_filters: true
+  chart_configuration:
+    '238':
+      id: 238
+      crossFilters:
+        scope:
+          rootPath:
+          - ROOT_ID
+          excluded:
+          - 238
+        chartsInScope:
+        - 239
+    '239':
+      id: 239
+      crossFilters:
+        scope:
+          rootPath:
+          - ROOT_ID
+          excluded:
+          - 239
+        chartsInScope:
+        - 238
+  color_scheme: googleCategory10c
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  default_filters: '{}'
+  native_filter_configuration:
+  - id: NATIVE_FILTER-4yPGxHVD4
+    controlValues:
+      enableEmptyFilter: true
+      defaultToFirstItem: false
+      multiSelect: false
+      searchAllOptions: false
+      inverseSelection: false
+    name: Metric
+    filterType: filter_select
+    targets:
+    - column:
+        name: Metric
+      datasetUuid: 8516dfea-7cfe-496b-a858-666f16aca378
+    defaultDataMask:
+      extraFormData:
+        filters:
+        - col: Metric
+          op: IN
+          val:
+          - Pageviews
+      filterState:
+        validateMessage: false
+        validateStatus: false
+        label: Pageviews
+        value:
+        - Pageviews
+      __cache:
+        validateMessage: false
+        validateStatus: false
+        label: Pageviews
+        value:
+        - Pageviews
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: This filter is required and deafults to pageviews but can be used
+      to switch between different metrics.
+    chartsInScope:
+    - 238
+    - 239
+    tabsInScope: []
+  - id: NATIVE_FILTER-hChcx8K3x
+    controlValues:
+      enableEmptyFilter: false
+    name: Time Grain
+    filterType: filter_timegrain
+    targets:
+    - datasetUuid: 8516dfea-7cfe-496b-a858-666f16aca378
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: Use this filter to switch between days, weeks, months. This data
+      only goes down to the day time grain.
+    chartsInScope:
+    - 238
+    - 239
+    tabsInScope: []
+  shared_label_colors:
+    Sessions: '#3366cc'
+    4 weeks ago, Sessions: '#dc3912'
+    Pageviews: '#ff9900'
+    4 weeks ago, Pageviews: '#109618'
+    Users: '#990099'
+    4 weeks ago, Users: '#0099c6'
+  color_scheme_domain:
+  - '#3366cc'
+  - '#dc3912'
+  - '#ff9900'
+  - '#109618'
+  - '#990099'
+  - '#0099c6'
+  - '#dd4477'
+  - '#66aa00'
+  - '#b82e2e'
+  - '#316395'
+version: 1.0.0
